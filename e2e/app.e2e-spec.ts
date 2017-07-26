@@ -120,19 +120,14 @@ describe('Toy Robot Application', function () {
     place.click();
     moveButton = element(by.css("#btn-move"));
     moveButton.click();
-
     robotOuter = element.all(by.css("#robot-outer"));
     newTransform = robotOuter.getAttribute('transform');
     dataX = robotOuter.getAttribute('data-x');
     dataY = robotOuter.getAttribute('data-y');
-    // coordX = robotOuter.getAttribute('data-coordx');
-    // coordY = robotOuter.getAttribute('data-coordy');
-
     expect(newTransform).toEqual(["translate(0,-80)"]);
     expect(dataX).toEqual(['0']);
     expect(dataY).toEqual(['1']);
-    // expect(coordX).toEqual(['40']);
-    // expect(coordY).toEqual(['280']);
+
 
   });
 
@@ -149,19 +144,14 @@ describe('Toy Robot Application', function () {
     place.click();
     moveButton = element(by.css("#btn-move"));
     moveButton.click();
-
     robotOuter = element.all(by.css("#robot-outer"));
     newTransform = robotOuter.getAttribute('transform');
     dataX = robotOuter.getAttribute('data-x');
     dataY = robotOuter.getAttribute('data-y');
-    // coordX = robotOuter.getAttribute('data-coordx');
-    // coordY = robotOuter.getAttribute('data-coordy');
-
     expect(newTransform).toEqual(["translate(0,-80)"]);
     expect(dataX).toEqual(['0']);
     expect(dataY).toEqual(['2']);
-    // expect(coordX).toEqual(['40']);
-    // expect(coordY).toEqual(['200']);
+
 
   });
 
