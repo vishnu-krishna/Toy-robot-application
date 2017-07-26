@@ -1,0 +1,35 @@
+/*    --------------------------------------------------
+:: Action buttons and Field selection
+-------------------------------------------------- */
+.actionSection .form-control {
+  margin-bottom: 15px;
+  width:250px;
+}
+#grid-div{
+  margin-bottom: 15px;
+}
+
+/*    --------------------------------------------------
+:: Inputs & Buttons
+-------------------------------------------------- */
+
+.form-control {
+  color: #212121;
+}
+
+.btn-custom {
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left:10px;
+  color: #fff;
+  border-radius: 7px;
+  border: 1px solid black;
+  background-color: #2C3E50;
+}
+.btn-custom:hover {
+  color: #2C3E50;
+  font-weight: bolder;
+  background-color: #95A5A6;
+}
+
+

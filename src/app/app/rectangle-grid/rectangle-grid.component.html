@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div id="grid-div" class="col-md-5 col-md-offset-1 col-sm-4" #grid>
+    </div>
+    <div class="actionSection">
+      <div class="col-md-5 col-md-offset-1 col-sm-12">
+        <form>
+          <div class="form-group">
+            <label for="x" title="X-Coordinate">X-Coordinate</label>
+            <select class="form-control" name="x" required id="x" #x>
+                  <option *ngFor="let value of coOrdinates" value={{value}}>
+                    {{value}}
+                  </option>
+                </select>
+            <label for="y" title="Y-Coordinate">Y-Coordinate</label>
+            <select class="form-control" name="y" required id="y" #y>
+                  <option *ngFor="let value of coOrdinates" value={{value}}>
+                    {{value}}
+                  </option>  
+                </select>
+            <label for="face" title="Direction">Direction to Face</label>
+            <select class="form-control" name="face" required id="face" #face>
+                  <option *ngFor="let direct of direction" value={{direct.id}}>
+                    {{direct.value}}
+                  </option>
+                </select>
+            <button type="button" id="btn-place" class="btn btn-primary btn-custom" (click)=createRobot(x.value,y.value,face.value) title="Place robot">Place robot</button>
+          </div>
+          <div class="form-group" *ngIf="showOtherSections">
+            <label for="turn" title="Turning direction">Turning direction</label>
+            <select class="form-control" name="turndirection" required id="turn" #turn>
+                  <option *ngFor="let direct of turnDirection" value={{direct.id}}>
+                    {{direct.value}}
+                  </option>
+                </select>
+            <button type="button" id="btn-turn" class="btn btn-primary btn-custom" (click)="turnRobot()" title="Turn robot">Turn robot</button>
+            <button type="button" id="btn-move" class="btn btn-primary btn-custom" (click)="moveRobot()" title="Move robot">Move robot</button>
+            <!-- </div> -->
+          </div>
+
+          <div class="form-group" *ngIf="showOtherSections">
+            <button type="button" id="btn-report" class="btn btn-primary btn-custom" (click)="getReport()" title="Show report">Show report</button>
+          </div>
+          <div class="alert alert-success" *ngIf="showReport" id="report">
+            {{reportMessage}}
+          </div>
+          <div class="alert alert-danger" *ngIf="showError" id="error">
+            {{showErrorMessage}}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
